@@ -32,7 +32,7 @@ func ip4bin(addr string) string {
 	return bin
 }
 
-func map6to4(from string, r Rules) (string, string) {
+func Map6to4(from string, r Rules) (string, string) {
 	from_bin := ip6bin(from)
 	for _, v := range r {
 		ipv6 := strings.Split(v.Ipv6, "/")
