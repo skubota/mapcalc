@@ -12,7 +12,7 @@ type Rules []Maprule
 type Maprule struct {
 	Ipv6   string
 	Ipv4   string
-	Ea_len int
+	Ea_length int
 }
 
 func ip6bin(addr string) string {
@@ -44,7 +44,7 @@ func Map6to4(from string, r Rules) (string, string) {
 			ipv4_len, _ := strconv.Atoi(ipv4[1])
 
 			addr_bin := ipv4_bin[0:ipv4_len] + from_bin[ipv6_len:ipv6_len+32-ipv4_len]
-			port_bin := from_bin[ipv6_len+32-ipv4_len : (ipv6_len+32-ipv4_len)+(v.Ea_len-(32-ipv4_len))]
+			port_bin := from_bin[ipv6_len+32-ipv4_len : (ipv6_len+32-ipv4_len)+(v.Ea_length-(32-ipv4_len))]
 			port_int, _ := strconv.ParseInt(port_bin, 2, 0)
 		
 			addr1, _ := strconv.ParseInt(addr_bin[0:8], 2, 0)
