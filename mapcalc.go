@@ -51,7 +51,7 @@ func Map6to4(from string, r Rules) (string, string) {
 			addr2, _ := strconv.ParseInt(addr_bin[8:16], 2, 0)
 			addr3, _ := strconv.ParseInt(addr_bin[16:24], 2, 0)
 			addr4, _ := strconv.ParseInt(addr_bin[24:32], 2, 0)
-			return fmt.Sprintf("%d.%d.%d.%d", addr1, addr2, addr3, addr4), fmt.Sprintf("0x%x", port_int)
+			return fmt.Sprintf("%d.%d.%d.%d", addr1, addr2, addr3, addr4), fmt.Sprintf("0x%02x", port_int)
 		}
 	}
 	return "", ""
