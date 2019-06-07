@@ -21,29 +21,29 @@ sample
 package main
 
 import (
-	"fmt"
-	"github.com/skubota/mapcalc"
+        "fmt"
+        "github.com/skubota/mapcalc"
 )
 
 func main() {
-        r := Rules{
-                Maprule{
+        r := mapcalc.Rules{
+                mapcalc.Maprule{
                         Ipv6:   "2001:db8::/32",
                         Ipv4:   "10.0.0.0/16",
-                        Ea_len: 24,
+                        Ea_length: 24,
                 },
-                Maprule{
+                mapcalc.Maprule{
                         Ipv6:   "2001:db9::/32",
                         Ipv4:   "10.1.0.0/16",
-                        Ea_len: 24,
+                        Ea_length: 24,
                 },
-                Maprule{
+                mapcalc.Maprule{
                         Ipv6:   "2001:db10::/32",
                         Ipv4:   "10.2.0.0/16",
-                        Ea_len: 24,
+                        Ea_length: 24,
                 },
         }
-        addr, port := Map6to4("2001:db8:0101:ab00::1", r)
+        addr, port := mapcalc.Map6to4("2001:db8:0101:0a00::1", r)
         fmt.Printf("Result: %s,%s\n", addr, port)
 }
 ```
