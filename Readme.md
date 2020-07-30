@@ -7,6 +7,13 @@ DESCRIPTION
 	Mapping of Address and Port with Encapsulation (MAP-E)
 	https://tools.ietf.org/html/rfc7597
 
+[![GoDev][godev-image]][godev-url]
+![Go](https://github.com/skubota/mapcalc/workflows/Go/badge.svg)
+
+[godev-image]: https://pkg.go.dev/badge/github.com/skubota/mapcalc
+[godev-url]: https://pkg.go.dev/github.com/skubota/mapcalc
+
+
 usage
 
 	$ go get github.com/skubota/mapcalc
